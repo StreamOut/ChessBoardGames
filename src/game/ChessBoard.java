@@ -1,6 +1,8 @@
 package game;
 
 public class ChessBoard {
-	private int test;
 
+	public static void main(String[] args) {
+		System.out.println("lol");
+	}
 }

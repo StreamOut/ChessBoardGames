@@ -1,11 +1,17 @@
 package game;
 
+import util.ConfigLoader;
+
 public class ChessBoard {
 	private Piece[][] pieces = new Piece[8][8];
 	
 	private void initChessBoard() {
 		Piece piece = new Piece("1", "Cavalier", "Joueur 1", 'C');
 		pieces[0][1] = piece;
+	}
+	
+	public void addPiece(Piece piece, int i, int j) {
+		pieces[i][j] = piece;
 	}
 	
 	public void display (){
@@ -25,7 +31,9 @@ public class ChessBoard {
 
 	public static void main(String[] args) {
 		ChessBoard chessBoard = new ChessBoard();
-		chessBoard.initChessBoard();
+		//chessBoard.initChessBoard();
+		chessBoard.display();
+		ConfigLoader.loadConfigFile("res/rules/chess.cfg", chessBoard);
 		chessBoard.display();
 	}
 }

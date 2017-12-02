@@ -7,7 +7,7 @@ public class Piece {
 	private String name;
 	private String joueurId;
 	private char draw;
-	private ArrayList<Vector> mouvements;
+	private ArrayList<Vector> mouvements = new ArrayList<>();
 	
 	public Piece (String id, String name, String joueurId, char draw) {
 		this.id = id;

@@ -32,7 +32,6 @@ public class ConfigLoader {
 		catch (Exception e){
 			System.out.println("Read file" +e.toString());
 		}
-		//System.out.println(json);
 		JSONParser parser = new JSONParser();
 		try{
 	         Object obj = parser.parse(json);

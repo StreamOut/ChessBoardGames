@@ -1,11 +1,9 @@
 package util;
 
-import java.awt.List;
 import java.io.BufferedReader;
 import java.io.FileInputStream;
 import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.util.Iterator;
 
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
@@ -58,7 +56,7 @@ public class ConfigLoader {
 		        	 String test = obj2.get(String.valueOf(j+1)).toString();
 		        	 System.out.println(test);
 		        	 Vector vector = new Vector(test);
-		        	 System.out.println(vector.getWay()[0]);
+		        	 //System.out.println(vector.getWay()[0]);
 		        	 piece.addMovement(vector);
 		         }
 		         System.out.println("Prises :");

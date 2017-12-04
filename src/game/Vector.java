@@ -1,28 +1,30 @@
 package game;
 
 public class Vector {
-	private int [] way = new int[2];
+	private int axeX;
+	private int axeY;
 	
 	public Vector (String vector) {
-		int j = 0;
-		for(int i = 0; i < vector.length(); i++) {
-			if(vector.charAt(i) == '-') {
-				i++;
-				way[j] = Character.getNumericValue((vector.charAt(i))) - 2 * Character.getNumericValue((vector.charAt(i)));
-			}
-			else
-				way[j] = Character.getNumericValue((vector.charAt(i)));
-			j++;
-			
-		}
+		int i = 1;
+		if(vector.charAt(0) == '-')
+			i++;
+		this.axeX = Integer.valueOf(vector.substring(0, i));
+		this.axeY = Integer.valueOf(vector.substring(i, vector.length()));
+		System.out.println("X "+axeX+" Y "+axeY);
 	}
 
-	public int[] getWay() {
-		return way;
+	public int getAxeX() {
+		return axeX;
 	}
 
-	public void setWay(int[] way) {
-		this.way = way;
+	public int getAxeY() {
+		return axeY;
 	}
+
+	@Override
+	public String toString() {
+		return "Vector [axeX=" + axeX + ", axeY=" + axeY + "]";
+	}
+	
 
 }
